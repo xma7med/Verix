@@ -27,11 +27,11 @@
   <div class="mobile" *ngIf="menuOpen">
     <div class="mobile__backdrop" (click)="closeMenu()"></div>
     <div class="mobile__panel">
-    <a routerLink="/"  fragment="products">The Scent</a>
-      <a routerLink="/"  fragment="vessel">The Bottle</a>
-      <a routerLink="/"  fragment="offer">Offer</a>
-      <a routerLink="/"  fragment="delivery">Delivery</a>
-      <a routerLink="/"  fragment="reserve">Contact</a>
+    <a routerLink="/"  fragment="products"  (click)="onNavClick()">The Scent</a>
+      <a routerLink="/"  fragment="vessel"  (click)="onNavClick()">The Bottle</a>
+      <a routerLink="/"  fragment="offer"  (click)="onNavClick()" >Offer</a>
+      <a routerLink="/"  fragment="delivery"  (click)="onNavClick()" >Delivery</a>
+      <a routerLink="/"  fragment="reserve"  (click)="onNavClick()" >Contact</a>
       <a class="mobile__order" href="#" (click)="closeMenu()">Order</a>
     </div>
   </div>
