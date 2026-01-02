@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+  --bg: #070707;
+  --panel: #0c0c0c;
+  --text: rgba(255,255,255,.88);
+  --muted: rgba(255,255,255,.55);
+
+  --gold: #c9a24a;
+  --gold-dim: rgba(201,162,74,.22);
+
+  --stroke: rgba(255,255,255,.10);
+
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --container: 1100px;
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+body{
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(900px 700px at 50% 25%, rgba(255,255,255,.06), rgba(0,0,0,0) 60%),
+    radial-gradient(900px 700px at 50% 80%, rgba(201,162,74,.05), rgba(0,0,0,0) 55%),
+    linear-gradient(#000, var(--bg));
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
+}
+
+a{ color: inherit; text-decoration: none; }
+
+.container{
+  width: min(var(--container), calc(100% - 40px));
+  margin-inline: auto;
+}
+
+:host{ display: block; min-height: 100vh; }
+:root{
+  --r-pill: 999px;
+  --gold-dim: rgba(201,162,74,.22);
+  --section-pad: 56px;
+}
+@media (min-width: 768px){
+  :root{ --section-pad: 86px; }
+}
+html{ scroll-behavior: smooth; }
+.offer-anchor{
+  margin-top: 16px;   // المسافة الوحيدة بين السهم والأوفر
+}
+:root
+{ 
+    --font-serif: 'Playfair Display', 'Libre Baskerville', serif;
+    --font-sans: 'Inter', 'SF Pro Text', system-ui, sans-serif;
+      --gold: rgba(201,162,74,.95);
+  --muted: rgba(255,255,255,.65);
+}

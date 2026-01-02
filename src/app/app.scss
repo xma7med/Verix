@@ -1,0 +1,19 @@
+:host{ display: block; min-height: 100vh; }
+:root{
+  --r-pill: 999px;
+  --gold-dim: rgba(201,162,74,.22);
+  --section-pad: 56px;
+}
+@media (min-width: 768px){
+  :root{ --section-pad: 86px; }
+}
+html{ scroll-behavior: smooth; }
+.offer-anchor{
+  margin-top: 16px;   // المسافة الوحيدة بين السهم والأوفر
+}
+:root
+{ 
+    --bg: #141313;
+    --font-serif: 'Playfair Display', 'Libre Baskerville', serif;
+    --font-sans: 'Inter', 'SF Pro Text', system-ui, sans-serif;
+}

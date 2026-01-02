@@ -1,0 +1,120 @@
+.del{
+  background: var(--bg);
+  padding: 86px 0;
+  position: relative;
+}
+
+/* الخطين الخفاف (حدود السكرين) */
+.del::before,
+.del::after{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  height:1px;
+  background: rgba(255,255,255,.04);
+  opacity: .75;
+}
+.del::before{ top:0; }
+.del::after{ bottom:0; }
+
+.del__wrap{
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.del__title{
+     font-family: var(--font-serif);
+  margin: 0;
+  font-size: clamp(26px, 4vw, 44px);
+  font-weight: 500;
+  color: rgba(255,255,255,.88);
+  letter-spacing: .02em;
+}
+
+.del__sub{
+     font-family: var(--font-serif);
+  margin: 12px 0 0;
+  font-size: 11px;
+  letter-spacing: .08em;
+  color: rgba(201,162,74,.70);
+}
+
+.del__grid{
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  justify-items: center;
+}
+
+@media (min-width: 900px){
+  .del__grid{
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+  }
+}
+
+.ship{
+  width: min(420px, 92%);
+  padding: 22px 20px 24px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+.ship__icon{
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 10px;
+  display: grid;
+  place-items: center;
+  color: rgba(201,162,74,.85);
+}
+
+/* Pin بسيط (بدون SVG) */
+.pin{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(201,162,74,.85);
+  position: relative;
+  box-shadow: 0 0 18px rgba(201,162,74,.12);
+}
+.pin::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:100%;
+  width:2px;
+  height:8px;
+  transform: translateX(-50%);
+  background: rgba(201,162,74,.55);
+  border-radius: 2px;
+  opacity: .9;
+}
+
+.ship__title{
+     font-family: var(--font-serif);
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: .06em;
+  font-weight: 500;
+  color: rgba(201,162,74,.85);
+}
+
+.ship__line{
+      font-family: var(--font-sans);
+  margin: 10px 0 0;
+  font-size: 11px;
+  letter-spacing: .04em;
+  color: rgba(255,255,255,.62);
+}
+
+.ship__meta{
+      font-family: var(--font-sans);
+  margin: 10px 0 0;
+  font-size: 10px;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,.40);
+}

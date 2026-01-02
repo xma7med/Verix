@@ -1,0 +1,87 @@
+<section class="res section" aria-label="Reserve">
+  <div class="container res__wrap">
+    <h2 class="res__title">Reserve Yours</h2>
+    <p class="res__sub">Limited quantities remain. Order now.</p>
+
+    <div class="res__actions">
+      <a class="btn btn--gold" [href]="waLink" target="_blank" rel="noopener">
+        Order via WhatsApp
+      </a>
+      <a class="btn btn--ghost" href="https://ig.me/m/verix.signature" target="_blank" rel="noopener">
+        DM on Instagram
+      </a>
+    </div>
+
+    <form class="res__form" [formGroup]="form" (ngSubmit)="submit()">
+      <label class="field">
+        <input class="input" type="text" placeholder="Full name - الأسم " formControlName="fullName" />
+            <small class="field__err" *ngIf="isInvalid('fullName')">Required - مطلوب </small>
+      </label>
+
+      <label class="field">
+        <input class="input" type="tel" placeholder="Phone number - رقم الهاتف " formControlName="phone" />
+            <small class="field__err" *ngIf="isInvalid('phone')">Required - مطلوب </small>
+      </label>
+        <label class="field">
+        <input class="input" type="text" placeholder="Address - العنوان " formControlName="address" />
+        <small class="field__err" *ngIf="isInvalid('address')">Required - مطلوب </small>
+
+      </label>
+
+      <!-- <label class="field">
+          <span class="field__label">الحجم – Size</span>
+        <select class="select" formControlName="size">
+       <small class="field__err" *ngIf="isInvalid('size')">Required - مطلوب </small>
+
+          <option>50ml - 479 EGP</option>
+          <option>100ml - 779 EGP</option>
+        </select>
+        <label class="field">
+       <small class="field__err" *ngIf="isInvalid('quantity')">Required - مطلوب </small>
+
+  <input
+    class="input"
+    type="number"
+    min="1"
+    max="5"
+    placeholder="Quantity- الكميه"
+    formControlName="quantity" />
+</label>
+      </label> -->
+
+      <label class="field">
+  <span class="field__label">الحجم – Size</span>
+
+  <select class="select" formControlName="size">
+    <option>50ml - 479 EGP</option>
+    <option>100ml - 779 EGP</option>
+  </select>
+
+  <small class="field__err" *ngIf="isInvalid('size')">Required - مطلوب</small>
+</label>
+
+<label class="field">
+  <span class="field__label">الكمية – Quantity</span>
+
+  <div class="qty">
+    <button type="button" class="qty__btn" (click)="decQty()" [disabled]="qtyValue <= 1">−</button>
+
+    <input
+      class="input qty__input"
+      type="text"
+      [value]="qtyValue"
+      readonly
+      tabindex="-1"
+    />
+
+    <button type="button" class="qty__btn" (click)="incQty()" [disabled]="qtyValue >= 5">+</button>
+  </div>
+
+  <small class="field__err" *ngIf="isInvalid('quantity')">Max 5 - أقصى ٥</small>
+</label>
+
+
+      <button class="btn btn--wide btn--gold" type="submit">Submit order</button>
+    </form>
+  </div>
+</section>

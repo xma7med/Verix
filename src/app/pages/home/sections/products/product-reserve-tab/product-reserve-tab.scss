@@ -1,0 +1,153 @@
+.tab{
+  margin-top: 18px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.06);
+  padding: 18px;
+}
+
+.tab__wrap{
+  width: min(740px, 100%);
+  margin: 0 auto;
+  position: relative;
+}
+
+.tab__x{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.18);
+  color: rgba(255,255,255,.75);
+  font-size: 18px;
+}
+
+.tab__head{
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+.tab__img{
+  width: 86px;
+  height: 86px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.tab__kicker{
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(201,162,74,.22);
+  color: rgba(201,162,74,.85);
+  font-size: 10px;
+  letter-spacing: .22em;
+}
+
+.tab__title{
+  margin-top: 10px;
+  font-family: var(--font-serif);
+  color: rgba(255,255,255,.9);
+  font-size: 18px;
+}
+
+.tab__price{
+  margin-top: 6px;
+  color: rgba(201,162,74,.92);
+  letter-spacing: .06em;
+  font-size: 12px;
+}
+
+.tab__form{
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.tab__input{
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  color: rgba(255,255,255,.85);
+  padding: 0 12px;
+  outline: none;
+}
+
+.tab__btn{
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(201,162,74,.22);
+  background: rgba(0,0,0,.18);
+  color: rgba(201,162,74,.92);
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.err{
+  color: rgba(255,120,120,.9);
+  font-size: 12px;
+}
+
+
+
+
+.field {
+  display: block;
+}
+
+.err {
+  margin-top: 6px;
+  font-size: 11px;
+  color: rgba(255, 80, 80, .9);
+  letter-spacing: .04em;
+}
+
+.tab__input.ng-touched.ng-invalid,
+.tab__input.ng-dirty.ng-invalid {
+  border-color: rgba(255, 80, 80, .5);
+  box-shadow: 0 0 0 3px rgba(255, 80, 80, .12);
+}
+
+
+
+
+//---------------
+.qty{
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  gap: 10px;
+  align-items: center;
+}
+
+.qty__btn{
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.03);
+  color: rgba(255,255,255,.75);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.qty__btn:disabled{
+  opacity: .35;
+  cursor: not-allowed;
+}
+
+.qty__input{
+  height: 42px;
+  width: 100%;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.03);
+  color: rgba(255,255,255,.75);
+  outline: none;
+}

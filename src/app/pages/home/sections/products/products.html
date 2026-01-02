@@ -1,0 +1,30 @@
+<section class="products section" aria-label="Products">
+  <div class="container">
+    <div class="products__grid">
+      <article class="card" *ngFor="let p of products">
+        <div class="card__media">
+          <img class="card__img" [src]="p.img" [alt]="p.title" />
+        </div>
+
+        <h3 class="card__title">{{ p.title }}</h3>
+
+        <div class="card__price">
+          <span class="old">{{ p.oldPrice | number }} EGP</span>
+          <span class="new">{{ p.newPrice | number }} EGP</span>
+        </div>
+
+        <p class="card__note">Exception price. Limited release.</p>
+        <button class="card__btn" type="button" (click)="openTab(p)">
+          Reserve now
+        </button>
+      </article>
+    </div>
+     <div id="reserve-tab">
+      <product-reserve-tab
+        [open]="tabOpen"
+        [product]="selected"
+        (closed)="closeTab()">
+      </product-reserve-tab>
+    </div>
+  </div>
+</section>

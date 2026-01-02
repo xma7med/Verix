@@ -1,0 +1,84 @@
+.vessel{
+  background: var(--bg);
+  padding: 72px 0;
+  border: 0;
+  box-shadow: none;
+}
+
+.vessel::before,
+.vessel::after{
+  content: none !important; /* يقفل أي خطوط/فواصل */
+}
+
+.vessel__wrap{
+  max-width: 1060px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  align-items: center;
+}
+
+@media (min-width: 900px){
+  .vessel__wrap{
+    grid-template-columns: 1.05fr .95fr; /* الصورة أكبر سنة */
+    gap: 48px;
+  }
+}
+
+.vessel__media{
+  border-radius: 18px;
+  background: #000;
+  border: 1px solid rgba(255,255,255,.06);
+  padding: 18px;
+  width: min(520px, 92%);
+  margin: 0 auto;
+}
+
+@media (min-width: 900px){
+  .vessel__media{
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.vessel__img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.vessel__content{
+  text-align: left;
+  padding: 0 6px;
+}
+
+.vessel__title{
+     font-family: var(--font-serif);
+  margin: 0 0 14px;
+  font-size: clamp(28px, 3.6vw, 42px);
+  font-weight: 500;
+  color: rgba(255,255,255,.90);
+}
+
+.vessel__lead{
+       font-family: var(--font-sans);
+  margin: 0 0 14px;
+  font-size: 12px;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,.62);
+}
+
+.gold{
+  color: rgba(201,162,74,.82);
+}
+
+.vessel__text{
+      font-family: var(--font-sans);
+  margin: 0 0 10px;
+  font-size: 11px;
+  line-height: 1.9;
+  letter-spacing: .04em;
+  color: rgba(255,255,255,.48);
+}

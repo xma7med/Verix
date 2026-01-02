@@ -1,0 +1,64 @@
+<section class="tab" *ngIf="open && product">
+  <div class="tab__wrap">
+    <button class="tab__x" type="button" (click)="close()">×</button>
+
+    <div class="tab__head">
+      <img class="tab__img" [src]="product.img" [alt]="product.title" />
+      <div class="tab__meta">
+        <div class="tab__kicker">RESERVE</div>
+        <div class="tab__title">{{ product.title }}</div>
+        <div class="tab__price">{{ product.price }} EGP</div>
+      </div>
+    </div>
+
+    <form class="tab__form" [formGroup]="form" (ngSubmit)="submit()">
+        <div class="field">
+          <input class="tab__input" formControlName="fullName" placeholder="Full name - الأسم" />
+          <small class="err" *ngIf="isInvalid('fullName')">Required</small>
+        </div>
+        <div class="field">
+          <input class="tab__input" formControlName="phone" placeholder="Phone number - الهاتف" />
+          <small class="err" *ngIf="isInvalid('phone')">Required</small>
+        </div>
+        <div class="field">
+          <input class="tab__input" formControlName="address" placeholder="Address - العنوان" />
+          <small class="err" *ngIf="isInvalid('address')">Required</small>
+        </div>
+
+
+        <!-- <div class="field">
+          <input  class="tab__input" type="number" min="1" max="5" formControlName="qty" placeholder="Quantity - الكميه"/>
+          <small class="err" *ngIf="isInvalid('qty')">Required</small>
+        </div> -->
+
+<div class="field">
+  <div class="qty">
+    <button type="button" class="qty__btn" (click)="decQty()" [disabled]="qtyValue <= 1">−</button>
+
+    <input
+      readonly
+      class="qty__input"
+      type="number"
+      min="1"
+      max="5"
+      step="1"
+      [value]="qtyValue"
+      (input)="onQtyInput($event)"
+      placeholder="Quantity - الكميه"
+    />
+
+    <button type="button" class="qty__btn" (click)="incQty()" [disabled]="qtyValue >= 5">+</button>
+  </div>
+
+  <small class="err" *ngIf="qtyCtrl.touched && qtyCtrl.errors?.['min']">Min 1</small>
+  <small class="err" *ngIf="qtyCtrl.touched && qtyCtrl.errors?.['max']">Max 5</small>
+  <small class="err" *ngIf="qtyCtrl.touched && qtyCtrl.errors?.['required']">Required</small>
+</div>
+
+
+      <div class="err" *ngIf="errorMsg">{{ errorMsg }}</div>
+      <button class="tab__btn" type="submit" [disabled]="sending"> {{ sending ? 'Sending...' : 'Send' }} </button>
+    </form>
+
+  </div>
+</section>

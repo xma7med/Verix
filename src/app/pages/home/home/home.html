@@ -1,0 +1,40 @@
+<app-navbar />
+
+<main class="hero">
+  <div class="container hero__wrap">
+    <div class="product-card">
+     <!-- <img class="product-card__img" [src]="'/assets/images/heroF2.png'" alt="VÉRIX bottle" /> -->
+     <img class="product-card__img" [src]="'/assets/images/jpg2png/h3.png'" alt="VÉRIX bottle" />
+    </div>
+
+    <h1 class="brand-title">VÉRIX</h1>
+    <h2 class="sub-title">First Signature</h2>
+    <p class="desc">Crafting time. Defining scent.</p>
+
+    <div class="cta">
+      <a class="btn btn--gold" href="#reserve">Order via WhatsApp</a>
+      <a class="btn btn--ghost" href="#products">Explore the scent</a>
+    </div>
+
+    <div class="scroll">
+        <a href="#offer" class="scroll__chev">⌄</a>
+    </div>
+  </div>
+</main>
+
+<section id="offer" class="offer-anchor">
+  <year-end-offer />
+</section>
+
+<section id="products" class="products">
+  <!-- cards -->
+  <products-section />
+</section>
+
+<architecture-section id="architecture" />
+<vessel-section id="vessel" />
+<longevity-section id="longevity" />
+<delivery-section id="delivery"  />
+<testimonials-section id="testimonials" /> 
+<reserve-section id="reserve"/> 
+<app-footer id="footer" />

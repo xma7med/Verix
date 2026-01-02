@@ -1,0 +1,14 @@
+<section class="tst section" aria-label="Testimonials">
+  <div class="container tst__wrap">
+    <div class="tst__grid">
+      <article class="tst__item" *ngFor="let t of items">
+        <div class="tst__stars" aria-label="5 stars">
+          <span class="star" *ngFor="let _ of stars">★</span>
+        </div>
+
+        <p class="tst__quote">“{{ t.quote }}”</p>
+        <p class="tst__by">{{ t.by }}</p>
+      </article>
+    </div>
+  </div>
+</section>

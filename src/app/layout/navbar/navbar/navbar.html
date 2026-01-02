@@ -1,0 +1,38 @@
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="brand" routerLink="/">
+      <span class="brand__text">VÉRIX</span>
+    </a>
+
+    <nav class="links">
+      <a routerLink="/"  fragment="products">The Scent</a>
+      <a routerLink="/"  fragment="vessel">The Bottle</a>
+      <a routerLink="/"  fragment="offer">Offer</a>
+      <a routerLink="/"  fragment="delivery">Delivery</a>
+      <a routerLink="/"  fragment="reserve">Contact</a>
+    </nav>
+
+    <div class="actions">
+      <a class="order-btn" routerLink="/"  fragment="reserve" aria-label="Order">
+        <span class="order-icon">⟲</span>
+        <span>Order</span>
+      </a>
+
+      <button class="burger" type="button" (click)="toggleMenu()" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile" *ngIf="menuOpen">
+    <div class="mobile__backdrop" (click)="closeMenu()"></div>
+    <div class="mobile__panel">
+      <a (click)="closeMenu()" routerLink="/">The Scent</a>
+      <a (click)="closeMenu()" routerLink="/">The Bottle</a>
+      <a (click)="closeMenu()" routerLink="/">Offer</a>
+      <a (click)="closeMenu()" routerLink="/">Delivery</a>
+      <a (click)="closeMenu()" routerLink="/">Contact</a>
+      <a class="mobile__order" href="#" (click)="closeMenu()">Order</a>
+    </div>
+  </div>
+</header>

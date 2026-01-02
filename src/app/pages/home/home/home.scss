@@ -1,0 +1,152 @@
+.hero{
+padding-top: 18px;
+ min-height: unset;   // لو كنت مستخدم 100vh
+  // padding-top: 30px;   // للـ navbar
+  padding-bottom: 0px; // أقل مسافة قبل السهم
+    background:
+    radial-gradient(900px 520px at 50% 22%, rgba(255,255,255,.06), rgba(0,0,0,0) 62%),
+    radial-gradient(700px 420px at 50% 48%, rgba(201,162,74,.06), rgba(0,0,0,0) 60%),
+    linear-gradient(#000, #070707);
+}
+
+
+.hero__wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-card{
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+  border-radius: 18px; /* أو أقل */
+  background: transparent;
+  margin-top: 0px
+}
+
+.product-card__img{
+  width: 72%;
+  max-width: 280px;
+  height: auto;
+  display: block;
+  filter: contrast(1.05) saturate(1.05);
+
+  justify-self: center;
+}
+
+.brand-title{
+     font-family: var(--font-serif);
+  margin: 2px 0 10px;
+  font-size: clamp(44px, 6vw, 66px);
+  letter-spacing: .28em;
+  font-weight: 500;
+  color: rgba(201,162,74,.92);
+}
+
+.sub-title{
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(20px, 2.3vw, 28px);
+  letter-spacing: .06em;
+  font-weight: 500;
+  color: rgba(255,255,255,.78);
+}
+
+.desc{
+     font-family: var(--font-sans);
+  margin: 10px 0 0;
+  font-size: 12px;
+  letter-spacing: .08em;
+  color: var(--muted);
+}
+
+.cta{
+  display: flex;
+  gap: 14px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn{
+     font-family: var(--font-sans);
+  height: 44px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  letter-spacing: .08em;
+  border: 1px solid rgba(255,255,255,.10);
+  color: rgba(255,255,255,.78);
+  background: rgba(0,0,0,.18);
+  transition: transform .12s ease, border-color .12s ease, color .12s ease;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,.16);
+  color: rgba(255,255,255,.90);
+}
+
+.btn--gold{
+  border-color: var(--gold-dim);
+  color: rgba(201,162,74,.95);
+}
+
+.btn--gold:hover{
+  border-color: rgba(201,162,74,.35);
+}
+
+.btn--ghost{
+  border-color: rgba(255,255,255,.10);
+}
+
+.scroll{
+
+    margin: 1px 0 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.scroll__chev{
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+  border: 1px solid rgba(201,162,74,.20);
+  color: rgba(201,162,74,.80);
+  background: rgba(0,0,0,.10);
+
+  transform: translateY(0);
+  animation: scrollNudge 1.6s ease-in-out infinite;
+
+  /* نفس إحساس التصميم: نقطة ضوء صغيرة */
+  box-shadow: 0 0 22px rgba(201,162,74,.08);
+}
+
+@keyframes scrollNudge{
+  0%, 100% { transform: translateY(0); opacity: .65; }
+  50%      { transform: translateY(6px); opacity: 1; }
+}
+
+.offer-anchor {
+  scroll-margin-top: calc(50vh - 120px);
+}
+
+.product-card__img{
+ 
+  width: min(350px, 82vw);   /* كان 280px تقريبًا */
+  height: auto;
+  display: block;
+  margin: 0 auto 6px;
+
+}
